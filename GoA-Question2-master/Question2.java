@@ -1,0 +1,29 @@
+public class Question2{
+    
+    // Method for finding if string is a palidrome or not
+    static boolean isPalindrome(String str){
+        
+        // Iterates through the characters of the string, checking if the string is a palindrome or not
+        for(int chars = 0; chars < str.length() / 2; chars++){
+            
+            // Checks the first and last characters if they are identical, immediately returns false once unidentical
+            if(str.charAt(chars) != str.charAt(str.length() - chars - 1)){
+                
+                return false;
+            }
+        }
+        // Returns true if does not detect any unidentical characters which would disqualify the string from being a palindrome
+        return true;
+        
+    }
+    
+    public static void main(String[] args){
+        
+        // Sample string to input into the method to check for palindrome status
+        String stringSample = "racecar";
+        
+        // Print out the return statement of the method
+        System.out.println(isPalindrome(stringSample));
+        
+    }
+}
